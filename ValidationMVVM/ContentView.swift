@@ -7,15 +7,56 @@
 
 import SwiftUI
 
+//struct LoginState {
+//    var email: String = ""
+//    var password: String = ""
+//    var emailError: LoginError?
+//    var passwordError: LoginError?
+//    
+//    mutating func clearErrors() {
+//        emailError = nil
+//        passwordError = nil
+//    }
+//}
+
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+    
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var errors: [LoginError] = []
+    
+    var isValid: Bool {
+        
+        errors.removeAll()
+        
+        if email.isEmpty {
+            errors.append(.emailEmpty)
+        } else if email.isValidEmail {
+            errors.append(.emailInvalid)
         }
-        .padding()
+        
+        if password.isEmpty {
+            errors.append(.passwordEmpty)
+        }
+        
+        return errors.isEmpty
+    }
+    
+    var body: some View {
+        Form {
+            TextField("Email", text: $email)
+                .textInputAutocapitalization(.never)
+        
+            SecureField("Password", text: $password)
+            
+            Button("Login") {
+                if isValid {
+                    print("Login Success")
+                }
+            }
+            
+            ValidationSummaryView(errors: errors)
+        }
     }
 }
 

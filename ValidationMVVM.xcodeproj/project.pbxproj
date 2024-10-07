@@ -35,16 +35,6 @@
 			path = ValidationMVVM;
 			sourceTree = "<group>";
 		};
-		EAEBD6112CB3BCD500C5B6F7 /* ValidationMVVMTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ValidationMVVMTests;
-			sourceTree = "<group>";
-		};
-		EAEBD61B2CB3BCD500C5B6F7 /* ValidationMVVMUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ValidationMVVMUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				EAEBD6002CB3BCD200C5B6F7 /* ValidationMVVM */,
-				EAEBD6112CB3BCD500C5B6F7 /* ValidationMVVMTests */,
-				EAEBD61B2CB3BCD500C5B6F7 /* ValidationMVVMUITests */,
 				EAEBD5FF2CB3BCD200C5B6F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +118,6 @@
 			dependencies = (
 				EAEBD6102CB3BCD500C5B6F7 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				EAEBD6112CB3BCD500C5B6F7 /* ValidationMVVMTests */,
-			);
 			name = ValidationMVVMTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +137,6 @@
 			);
 			dependencies = (
 				EAEBD61A2CB3BCD500C5B6F7 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				EAEBD61B2CB3BCD500C5B6F7 /* ValidationMVVMUITests */,
 			);
 			name = ValidationMVVMUITests;
 			packageProductDependencies = (
@@ -409,7 +391,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rickyprimay.ValidationMVVM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rickyprimay.VacationVegas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -438,7 +420,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rickyprimay.ValidationMVVM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rickyprimay.VacationVegas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
